@@ -12,7 +12,9 @@
   environment.systemPackages = with pkgs; [
     git
     gcc
-    gunmake
+    zig
+    unzip
+    gnumake
     clang-tools
     cmake
     cargo
