@@ -11,7 +11,10 @@
 
   environment.systemPackages = with pkgs; [
     git
+    gcc
+    gunmake
     clang-tools
+    cmake
     cargo
   ];
 
