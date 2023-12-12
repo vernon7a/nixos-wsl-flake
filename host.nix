@@ -37,6 +37,14 @@
     allowUnfree = true;
   };
 
+  # GnuPG
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
+  services.pcscd.enable = true;
+
   # This needs to be set to get the default system-level fish configuration, such
   # as completions for Nix and related tools. This is also required because on macOS
   # the $PATH doesn't include all the entries it should by default.
