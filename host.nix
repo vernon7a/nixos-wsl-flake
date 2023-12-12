@@ -1,12 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  imports = [];
-
+{ pkgs, inputs, ... }: {
   time.timeZone = "Asia/Shanghai";
-
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
 
   environment.systemPackages = with pkgs; [
@@ -26,16 +19,7 @@
   ];
 
   nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-    # This seems to cause issues:
-    # https://github.com/NixOS/nix/issues/7273
-    #auto-optimise-store = true;
-    substituters = [
-      "https://helix.cachix.org"
-    ];
-    trusted-public-keys = [
-      "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
-    ];
+    experimental-features = [ "nix-command" "flakes" ];
   };
 
   nix.registry = {
@@ -57,8 +41,6 @@
   # as completions for Nix and related tools. This is also required because on macOS
   # the $PATH doesn't include all the entries it should by default.
   programs.fish.enable = true;
-
   programs.command-not-found.enable = false;
-
   services.tailscale.enable = true;
 }

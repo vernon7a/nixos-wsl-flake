@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./host.nix
   ];
@@ -17,7 +17,7 @@
     description = "vernon7a";
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = ["wheel"];
+    extraGroups = [ "wheel" ];
     hashedPassword = "$y$j9T$fdmQNBEaAn1tzSsNyhL7a/$l6u1ZKbc9iFjAWdejmnFjyivW7CxSoeDWFrVZGHdNPB";
   };
 
