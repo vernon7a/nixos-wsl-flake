@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.stateVersion = "23.11";
   home.username = "vernon7a";
+  home.homeDirectory = "/home/vernon7a";
 
   home.packages = with pkgs; [
     neovim
@@ -8,7 +9,9 @@
     fd
     ripgrep
     fzf
+    just
 
+    disfetch
     eza
     jq
     glow

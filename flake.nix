@@ -59,7 +59,7 @@
           modules = [
             home-manager.nixosModules.default
             nixos-wsl.nixosModules.default
-            (home-manager-vernon7a ./wsl-home.nix)
+            (home-manager-vernon7a ./home.nix)
             ./wsl-host.nix
             nix-index-database.nixosModules.nix-index
           ];
